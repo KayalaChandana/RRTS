@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+
+input {
+    caret-color: red;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    background: linear-gradient(to right, #FF8C00, #FFD700);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    place-items: center;
+    place-items: center;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.logo {
+    width: 90px;
+    display: flex;
+    margin-left: 0px;
+    /* Adjust the width as needed */
+    height: auto;
+    padding-left: 0px;
+
+    /* Maintain aspect ratio */
+
+    /* Adjust the margin as needed */
+
+}
+
+.container-1 {
+    height: 90px;
+    justify-content: center;
+    width: 100%;
+    max-width: none;
+    background-color: white;
+
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 0px;
+    padding: 0;
+}
+
+.text-center {
+    margin: 0;
+    /* Remove the default margin for text-center */
+}
+
+.logo-text p {
+    margin-top: 0;
+    /* Remove default margin for the paragraph */
+    font-size: 35px;
+    display: contents;
+
+
+
+    /* Adjust the font size as needed */
+}
+
+.text {
+    align-content: end;
+    color: #DD6E0F;
+}
+
+h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 900;
+    font-style: inherit;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #DD6E0F;
+
+}
+
+.small-text {
+
+    font-size: 20px;
+    margin-left: 30px;
+    display: block;
+    margin-top: -15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    /* Adjust the font size of the small text as needed */
+}
+
+.container {
+    position: relative;
+    width: 650px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: white;
+    box-shadow: 0 100px 100px rgba(1, 1, 1, 10);
+
+}
+
+
+
+.brand-logo {
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    background-image: "C:\Users\ediga\Pictures\user3.png";
+    border-radius: 50px;
+    box-sizing: border-box;
+    box-shadow: 0 30px 30px rgba(1, 0, 0, 20);
+}
+
+.brand-title {
+    margin-top: 0px;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: black;
+    letter-spacing: 1px;
+}
+
+.footer-text {
+    text-align: center;
+    margin-top: 20px;
+    color: orange;
+    font-weight: 600;
+
+}
+
+.registration-link {
+    color: black;
+    /* Set your desired link color */
+    text-decoration: underline;
+    /* Add underline for better visibility */
+    cursor: pointer;
+    /* Change cursor on hover for better user experience */
+}
+
+.error-message {
+    color: orange;
+    /* Set your desired error message color */
+    margin-top: 10px;
+    font-weight: 5250;
+    font-size: large;
+}
+
+.inputs {
+    text-align: left;
+    margin-top: 30px;
+}
+
+label,
+input,
+button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.login-button:hover {
+    background-color: orange;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.login-button:active {
+    background-color: greenyellow;
+    transform: scale(0.95);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+
+    /* Add a "push" effect on button press */
+}
+
+label {
+    margin-bottom: 4px;
+}
+
+label:nth-of-type(2) {
+    margin-top: 12px;
+}
+
+input::placeholder {
+    color: gray;
+}
+
+
+.input-field {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid or;
+    position: relative;
+    background: #ecf0f3;
+    padding-left: 20px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px orange, inset -6px -6px 6px orange;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.input-field:hover {
+    border-color: orange;
+    box-shadow: inset 6px 6px 6px whitesmoke, inset -6px -6px 6px black;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px white(0, 0, 0, 0.1);
+}
+
+button {
+    color: orange;
+    margin-top: 20px;
+    background: gray;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #cbced1, -2px -2px -1px white;
+    transition: 0.1s;
+}
+
+button:hover {
+    box-shadow: none;
+}
+
+h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}

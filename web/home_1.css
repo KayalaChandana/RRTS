@@ -1,0 +1,931 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 2 Jun 2024, 3:05:09 pm
+    Author     : kayal
+*/
+
+/* #video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 0;
+    z-index: 1;
+    margin-bottom: 0;
+}
+
+#video-controls {
+    position: absolute;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    text-align: left;
+
+    bottom: 100px;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1;
+
+}
+
+.control-button {
+    margin: 10px;
+    width: 280px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 2;
+
+    color: black;
+    border: none;
+    border-radius: 25px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    display: inline-block;
+} */
+
+#video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+#video-controls {
+    position: absolute;
+    display: flex;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 2;
+    /* Increase z-index to ensure it's above the video */
+}
+
+.control-button {
+    margin: 10px;
+    width: 280px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 3;
+    /* Increase z-index to ensure it's above other elements */
+    color: black;
+    border: none;
+    border-radius: 25px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.control-button:hover {
+    background-color: black;
+    transform: scale(1.1);
+}
+
+/* Push effect */
+.control-button:active {
+    transform: translateY(2px);
+}
+
+.top-container {
+
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 900px;
+    z-index: 1;
+    margin-bottom: 1px;
+    margin-bottom: 0;
+    margin-top: 0px;
+    padding-top: 0px;
+
+    /* Adjust the height as needed */
+}
+
+
+.navbar {
+    height: 68px;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    background-color: transparent !important;
+}
+
+.navbar.sticky {
+
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+
+    /* Add other styles for the sticky navbar */
+}
+
+
+
+/* Add this to your existing CSS */
+
+.navbar-nav .nav-link {
+    font-size: 22px;
+    color: black;
+    transition: color 0.3s ease;
+    /* Add transition effect for smooth color change */
+}
+
+.navbar-nav .nav-link:hover {
+    color: white;
+    /* Change the color to your desired hover color */
+}
+
+/* Add this to your existing CSS */
+
+/* Add this to your existing CSS */
+
+
+
+.nav-item .nav-link:hover::after {
+    content: "";
+    display: block;
+    width: 10px;
+    /* Adjust the width of the underline */
+    height: 2px;
+    /* Adjust the thickness of the underline */
+    background-color: black;
+    /* Change the color of the underline */
+    position: absolute;
+    bottom: -2px;
+    /* Adjust the distance from the text */
+    left: 0;
+}
+
+
+
+nav a {
+
+    text-decoration: none;
+    padding: 15px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+nav a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+    z-index: 1;
+}
+
+nav a:focus,
+nav a:hover {
+    outline: none;
+}
+
+nav a:focus::after,
+nav a:hover::after {
+    width: 300px;
+}
+
+
+.counter-card {
+    padding: 50px;
+    /* Adjust padding to create space */
+    margin: 40px;
+    /* Adjust margin to create space */
+    height: 70px;
+    width: 120px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container-1 {
+    height: 90px;
+    justify-content: center;
+    width: 100%;
+    max-width: none;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: between;
+    align-items: start;
+    background-color: transparent !important;
+    z-index: 2;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background: linear-gradient(to right, #DD6E0F, #FF8C00);
+
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    width: 120px;
+
+    cursor: pointer;
+    display: flex;
+    margin-left: 0px;
+    /* Adjust the width as needed */
+    height: auto;
+    padding-left: 0px;
+    z-index: 1;
+
+    /* Maintain aspect ratio */
+
+    /* Adjust the margin as needed */
+
+}
+
+.logo-container {
+    display: flex;
+    align-items: left;
+    margin-left: 0px;
+    padding: 0;
+    z-index: 1;
+}
+
+.text-center {
+    margin: 0;
+    z-index: 1;
+    /* Remove the default margin for text-center */
+}
+
+.logo-text p {
+    margin-top: 0;
+    /* Remove default margin for the paragraph */
+    font-size: 35px;
+    z-index: 1;
+
+
+
+    /* Adjust the font size as needed */
+}
+
+.text {
+    align-content: end;
+    z-index: 1;
+}
+
+h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    font-size: xx-large;
+    font-style: inherit;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #DD6E0F;
+    z-index: 1;
+}
+
+.small-text {
+
+    font-size: 20px;
+    margin-left: 30px;
+    font-weight: 500;
+    font-size: x-large;
+    display: block;
+    margin-top: -15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    z-index: 1;
+    /* Adjust the font size of the small text as needed */
+}
+
+.right-corner-image {
+    margin-top: 20px;
+    margin-left: auto;
+    width: 150px;
+    cursor: pointer;
+    display: flex;
+
+    /* Adjust the width as needed */
+    height: auto;
+    z-index: 1;
+
+    /* This will push the image to the right */
+}
+
+
+
+
+/* this style belongs to water wave feature at the bottom */
+.custom-shape-divider-bottom-1700979296 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1700979296 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1px);
+    height: 99px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1700979296 .shape-fill {
+    fill: white;
+}
+
+
+
+
+.btn {
+    color: white;
+    background-color: orange;
+}
+
+.text-center {
+    font-weight: 500;
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+
+
+/* These styles belongs to caurosel sildes */
+.slider-container {
+
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-left: 70px;
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+
+
+.slider {
+    flex: 1;
+    /* Use flex property to distribute available space */
+    box-sizing: border-box;
+}
+
+.horizontal-slider {
+    width: 60%;
+    align-self: flex-start;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.vertical-slider {
+    width: 30%;
+    margin-left: 50px;
+    align-self: center;
+}
+
+
+.slider img {
+    width: 100%;
+    /* Make images fill their container */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+
+
+
+.hor-slide img {
+    height: 410px;
+    width: 49rem;
+    margin: 50px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.ver-slide img {
+    height: 120px;
+    width: 20rem;
+    margin: 10px;
+    border-radius: 20px;
+
+
+}
+
+
+/* these styles are for content */
+.content {
+    max-width: 95%;
+    margin: 10px 10px 10px 30px;
+    padding: 20px;
+    padding-left: 20px;
+    background-color: white;
+    border-radius: 20px;
+    margin-right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    background-image: url('path/to/your/image.jpg');
+    /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: cover;
+    /* Adjust the background size as needed */
+    background-position: center;
+    margin-right: 10px;
+    /* Adjust the background position as needed */
+}
+
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+
+
+.spin-icon {
+    display: inline-block;
+    margin-right: 10px;
+    animation: spin 2s infinite linear;
+    /* Adjust the spacing */
+}
+
+
+.animate-characters {
+    background-image: linear-gradient(-225deg, yellow 0%, red 29%, green 67%, #DD6E0F 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 15s linear infinite;
+    display: inline-block;
+}
+
+@keyframes textclip {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 10px;
+    }
+}
+
+
+.container-5 {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.count-area-content {
+    text-align: center;
+    background-color: #007bff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.count-digit {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.count-title {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 0px;
+    margin-top: 10px;
+    position: relative;
+    padding-left: 10px;
+
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.spin-icon {
+    display: inline-block;
+    margin-right: 10px;
+    animation: spin 2s infinite linear;
+    /* Adjust the spacing */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+/* accordion styles*/
+
+.line {
+    width: 100%;
+    height: 2px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: white;
+
+}
+
+/* Add some styling to the cards */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 300px;
+    transition: box-shadow 0.1s ease;
+    cursor: pointer;
+    margin-bottom: 30px;
+
+
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px black(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    /* Adjust shadow on hover */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+.card-text {
+    color: rgb(52, 45, 45);
+    font-family: "Roboto";
+    font-weight: 500;
+}
+
+.card-body {
+    height: 100%;
+    /* Use 100% to fill the card height */
+    overflow: hidden;
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    transition: background-color 0.1s ease, color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #DD6E0F;
+    transform: scale(1.05);
+}
+
+/* Center the article text */
+.articletext {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* accordion styles */
+
+
+
+.accordion {
+
+
+    box-shadow: 0 0 10px rgba(1, 0, 0, 0);
+    width: auto;
+    /* Adjust as needed */
+    margin: 40px auto;
+    /* Adjust as needed */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.accordion-item {
+    margin-bottom: 5px;
+    border-radius: 10px;
+    background-color: white;
+    padding-top: 0.2px;
+
+}
+
+.accordion-header {
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(243, 195, 106);
+    margin: 10px;
+    margin-top: 18px;
+}
+
+.arrow {
+    float: right;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .arrow {
+    transform: rotate(90deg);
+}
+
+.accordion-content {
+    padding: 15px;
+    display: none;
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+
+/* footer styles 
+
+/* CSS code for the footer */
+.scroll-to-top-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    /* Hide initially */
+    z-index: 1000;
+}
+
+#top-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    /* Button background color */
+    color: green;
+    /* Button text color */
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    display: block;
+}
+
+#footer {
+    background-image: linear-gradient(-225deg, red 0%, purple 29%, orange, grey 100%);
+    color: #fff;
+    padding: 20px;
+}
+
+#footer h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#footer p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: larger;
+}
+
+#footer a:hover {
+    color: #f0ad4e;
+}
+
+#footer .btn {
+    background-color: #f0ad4e;
+    border-color: #f0ad4e;
+    color: #fff;
+}
+
+#footer .btn:hover {
+    background-color: #ec971f;
+    border-color: #ec971f;
+    color: #fff;
+}
+
+#footer .list-unstyled {
+    margin: 0;
+    padding: 0;
+}
+
+#footer .list-unstyled li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#footer .social-icons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#footer .social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#footer .social-icons li a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    line-height: 32px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#footer .fa {
+    color: #fff;
+}
+
+#footer .fa:hover {
+    color: #f0ad4e;
+}
+
+.active {
+    color: purple;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+
+}
+
+.wrapper .icon {
+    position: relative;
+    background: black;
+    border-radius: 50%;
+    padding: 1px;
+    margin: 3px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+    background: #1877F2;
+    color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+    background: #1DA1F2;
+    color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #E4405F;
+    color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+    background: #333333;
+    color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+    background: #CD201F;
+    color: #ffffff;
+}
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: orange;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 999;
+}
+
+.close-btn {
+    cursor: pointer;
+    color: #3498db;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.close-btn:hover {
+    text-decoration: underline;
+}

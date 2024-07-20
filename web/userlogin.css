@@ -1,0 +1,177 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 2 Jun 2024, 3:37:13 pm
+    Author     : kayal
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+
+input {
+    caret-color: red;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #FF8C00, #FFD700);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    place-items: center;
+    overflow: hidden;
+    font-family: poppins;
+
+}
+
+.container {
+    position: relative;
+    width: 450px;
+    height: 600px;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: white;
+    box-shadow: 0 100px 100px rgba(10, 0, 0, 20);
+
+}
+
+
+
+.brand-logo {
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    background-image: none;
+    border-radius: 50px;
+    box-sizing: border-box;
+    box-shadow: 0 30px 30px rgba(1, 0, 0, 20);
+}
+
+.brand-title {
+    margin-top: 10px;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: black;
+    letter-spacing: 1px;
+}
+
+.footer-text {
+    text-align: center;
+    margin-top: 20px;
+    color: orange;
+    font-weight: 600;
+
+}
+
+.registration-link {
+    color: black;
+    /* Set your desired link color */
+    text-decoration: underline;
+    /* Add underline for better visibility */
+    cursor: pointer;
+    /* Change cursor on hover for better user experience */
+}
+
+.error-message {
+    color: orange;
+    /* Set your desired error message color */
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: large;
+}
+
+.inputs {
+    text-align: left;
+    margin-top: 30px;
+}
+
+label,
+input,
+button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+
+
+label {
+    margin-bottom: 4px;
+}
+
+label:nth-of-type(2) {
+    margin-top: 12px;
+}
+
+input::placeholder {
+    color: black;
+}
+
+
+
+.input-field {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid or;
+    position: relative;
+    background: #ecf0f3;
+    padding-left: 20px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px orange, inset -6px -6px 6px orange;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.input-field:hover {
+    border-color: orange;
+    box-shadow: inset 6px 6px 6px white, inset -6px -6px 6px black;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px white(0, 0, 0, 0.1);
+}
+
+button {
+    color: orange;
+    margin-top: 20px;
+    background: gray;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #cbced1, -2px -2px -1px white;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.login-button:hover {
+    background-color: orange;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.login-button:active {
+    background-color: greenyellow;
+    transform: scale(0.95);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+
+    /* Add a "push" effect on button press */
+}
+
+
+h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}

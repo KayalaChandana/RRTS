@@ -1,0 +1,59 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 2 Jun 2024, 3:46:36 pm
+    Author     : kayal
+*/
+footer {
+    background-image: linear-gradient(to right top, #37050c, #623515, #776f28, #6ead65, #12ebcd);
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content,
+.icons {
+    flex: 1 1 30%;
+    padding: 10px;
+}
+
+.icons a i {
+    font-size: 30px;
+    /* Adjust the size as needed */
+}
+
+.lists {
+    list-style: none;
+    /* Removes default bullet points */
+    padding: 0;
+    /* Removes default padding */
+}
+
+.lists li {
+    margin-bottom: 5px;
+}
+
+.lists li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.lists li a:hover {
+    color: #f5a623;
+}
+
+.lists li i {
+    margin-right: 5px;
+    /* Adjust spacing between icon and text */
+}
+
+
+
+/** For mobile devices **/
